@@ -1,0 +1,36 @@
+--- a/inference.py
++++ b/inference.py
+@@ -32,6 +32,9 @@
+     device = torch.device("mps")
+ else:
+     device = torch.device("cpu")
++
++if device.type == "cpu":
++    torch.set_num_threads(1)
+ 
+ fp16 = False
+ def load_models(args):
+@@ -134,7 +137,8 @@
+         # whisper
+         from transformers import AutoFeatureExtractor, WhisperModel
+         whisper_name = model_params.speech_tokenizer.name
+-        whisper_model = WhisperModel.from_pretrained(whisper_name, torch_dtype=torch.float16).to(device)
++        whisper_dtype = torch.float32 if device.type == 'cpu' else torch.float16
++        whisper_model = WhisperModel.from_pretrained(whisper_name, torch_dtype=whisper_dtype).to(device)
+         del whisper_model.decoder
+         whisper_feature_extractor = AutoFeatureExtractor.from_pretrained(whisper_name)
+ 
+--- a/inference_v2.py
++++ b/inference_v2.py
+@@ -14,7 +14,10 @@
+ else:
+     device = torch.device("cpu")
+ 
+-dtype = torch.float16
++if device.type == "cpu":
++    torch.set_num_threads(1)
++
++dtype = torch.float32 if device.type == 'cpu' else torch.float16
+ 
+ # Global variables to store model instances
+ vc_wrapper_v2 = None

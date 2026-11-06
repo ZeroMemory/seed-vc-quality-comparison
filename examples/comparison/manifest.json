@@ -1,0 +1,211 @@
+{
+  "environment": "Windows CPU, Python 3.10.20, PyTorch 2.4.0+cu124; one CPU thread; FP16 disabled; offline cached weights",
+  "source": "../../source.example.wav",
+  "reference": "../../reference.example.wav",
+  "quality_scope": "One short synthetic phrase. ASR and signal checks do not establish perceptual quality or voice identity. CAMPPlus is the same upstream conditioning encoder, not an independent identity test.",
+  "results": [
+    {
+      "id": "v1_01_baseline_steps25_cfg0.7",
+      "model": "v1",
+      "diffusion_steps": "25",
+      "length_adjust": "1.0",
+      "cfg_or_intelligibility": "0.7",
+      "similarity": {
+        "id": "v1_01_baseline_steps25_cfg0.7",
+        "cosine_to_reference": 0.8918329477310181,
+        "cosine_to_source": 0.8462607264518738
+      },
+      "convert_style": "",
+      "auto_f0_adjust": "False",
+      "semi_tone_shift": "0",
+      "status": "ok",
+      "file": "v1_01_baseline_steps25_cfg0.7__vc_source_reference_1.0_25_0.7.wav",
+      "quality": {
+        "id": "v1_01_baseline_steps25_cfg0.7",
+        "sha256": "4e44881d80b7ac792caa8d3c2e566e358f1910dab1c7d48d09bbd8711570ef30",
+        "text": "This is a local voice conversion test.",
+        "word_error_rate": 0.0,
+        "duration": 2.995374,
+        "sample_rate": 22050,
+        "channels": 1,
+        "rms": 0.1064973202002973,
+        "peak": 0.7250258326530457,
+        "clipped_fraction": 0.0
+      }
+    },
+    {
+      "id": "v1_02_quality_steps50_cfg0.7",
+      "model": "v1",
+      "diffusion_steps": "50",
+      "length_adjust": "1.0",
+      "cfg_or_intelligibility": "0.7",
+      "similarity": {
+        "id": "v1_02_quality_steps50_cfg0.7",
+        "cosine_to_reference": 0.8994115591049194,
+        "cosine_to_source": 0.8427915573120117
+      },
+      "convert_style": "",
+      "auto_f0_adjust": "False",
+      "semi_tone_shift": "0",
+      "status": "ok",
+      "file": "v1_02_quality_steps50_cfg0.7__vc_source_reference_1.0_50_0.7.wav",
+      "quality": {
+        "id": "v1_02_quality_steps50_cfg0.7",
+        "sha256": "f3067f42f99a57b18297ec0924dade43ac54a7f129846ec25ca3b761d63e1e8d",
+        "text": "This is a local voice conversion test.",
+        "word_error_rate": 0.0,
+        "duration": 2.995374,
+        "sample_rate": 22050,
+        "channels": 1,
+        "rms": 0.10676772897909984,
+        "peak": 0.7456560730934143,
+        "clipped_fraction": 0.0
+      }
+    },
+    {
+      "id": "v1_03_soft_steps35_cfg0.5",
+      "model": "v1",
+      "diffusion_steps": "35",
+      "length_adjust": "1.0",
+      "cfg_or_intelligibility": "0.5",
+      "similarity": {
+        "id": "v1_03_soft_steps35_cfg0.5",
+        "cosine_to_reference": 0.868927001953125,
+        "cosine_to_source": 0.8100347518920898
+      },
+      "convert_style": "",
+      "auto_f0_adjust": "False",
+      "semi_tone_shift": "0",
+      "status": "ok",
+      "file": "v1_03_soft_steps35_cfg0.5__vc_source_reference_1.0_35_0.5.wav",
+      "quality": {
+        "id": "v1_03_soft_steps35_cfg0.5",
+        "sha256": "fa120584ec0cf50dcbfb9b013b58160f6e7107d6e2cba1d8924aedd0fba273a2",
+        "text": "This is a local voice conversion test.",
+        "word_error_rate": 0.0,
+        "duration": 2.995374,
+        "sample_rate": 22050,
+        "channels": 1,
+        "rms": 0.10722927075487411,
+        "peak": 0.815024733543396,
+        "clipped_fraction": 0.0
+      }
+    },
+    {
+      "id": "v1_04_strong_steps35_cfg0.9",
+      "model": "v1",
+      "diffusion_steps": "35",
+      "length_adjust": "1.0",
+      "cfg_or_intelligibility": "0.9",
+      "similarity": {
+        "id": "v1_04_strong_steps35_cfg0.9",
+        "cosine_to_reference": 0.8894762396812439,
+        "cosine_to_source": 0.8419927954673767
+      },
+      "convert_style": "",
+      "auto_f0_adjust": "False",
+      "semi_tone_shift": "0",
+      "status": "ok",
+      "file": "v1_04_strong_steps35_cfg0.9__vc_source_reference_1.0_35_0.9.wav",
+      "quality": {
+        "id": "v1_04_strong_steps35_cfg0.9",
+        "sha256": "925fe86aeffc157017e23828d9679c9ef54ae823c60d5535aa21c401049b164c",
+        "text": "This is a local voice conversion test.",
+        "word_error_rate": 0.0,
+        "duration": 2.995374,
+        "sample_rate": 22050,
+        "channels": 1,
+        "rms": 0.108407970879807,
+        "peak": 0.8088387846946716,
+        "clipped_fraction": 0.0
+      }
+    },
+    {
+      "id": "v2_01_timbre_steps30_int0.0_sim0.7",
+      "model": "v2",
+      "diffusion_steps": "30",
+      "length_adjust": "1.0",
+      "cfg_or_intelligibility": "0.0",
+      "similarity": {
+        "id": "v2_01_timbre_steps30_int0.0_sim0.7",
+        "cosine_to_reference": 0.8828643560409546,
+        "cosine_to_source": 0.8241488933563232
+      },
+      "convert_style": "False",
+      "auto_f0_adjust": "",
+      "semi_tone_shift": "",
+      "status": "ok",
+      "file": "v2_01_timbre_steps30_int0.0_sim0.7__vc_v2_source_reference_1.0_30_0.7.wav",
+      "quality": {
+        "id": "v2_01_timbre_steps30_int0.0_sim0.7",
+        "sha256": "8f2f0896936d7191f0e2771150a840eac2a84ab0c9301fb791cab9d623b57a08",
+        "text": "This is a local voice conversion test.",
+        "word_error_rate": 0.0,
+        "duration": 2.995374,
+        "sample_rate": 22050,
+        "channels": 1,
+        "rms": 0.11208734040969051,
+        "peak": 0.742218017578125,
+        "clipped_fraction": 0.0
+      }
+    },
+    {
+      "id": "v2_02_timbre_steps50_int0.0_sim0.85",
+      "model": "v2",
+      "diffusion_steps": "50",
+      "length_adjust": "1.0",
+      "cfg_or_intelligibility": "0.0",
+      "similarity": {
+        "id": "v2_02_timbre_steps50_int0.0_sim0.85",
+        "cosine_to_reference": 0.9074316620826721,
+        "cosine_to_source": 0.8686387538909912
+      },
+      "convert_style": "False",
+      "auto_f0_adjust": "",
+      "semi_tone_shift": "",
+      "status": "ok",
+      "file": "v2_02_timbre_steps50_int0.0_sim0.85__vc_v2_source_reference_1.0_50_0.85.wav",
+      "quality": {
+        "id": "v2_02_timbre_steps50_int0.0_sim0.85",
+        "sha256": "bd7798bebe6b63d7730f9f28248221528bfa30dfbcaee0c2860c83f44ed2a63f",
+        "text": "This is a local voice conversion test.",
+        "word_error_rate": 0.0,
+        "duration": 2.995374,
+        "sample_rate": 22050,
+        "channels": 1,
+        "rms": 0.11014607063861359,
+        "peak": 0.655792236328125,
+        "clipped_fraction": 0.0
+      }
+    },
+    {
+      "id": "v2_03_style_steps50_int0.3_sim0.85",
+      "model": "v2",
+      "diffusion_steps": "50",
+      "length_adjust": "1.0",
+      "cfg_or_intelligibility": "0.3",
+      "similarity": {
+        "id": "v2_03_style_steps50_int0.3_sim0.85",
+        "cosine_to_reference": 0.8713043332099915,
+        "cosine_to_source": 0.784077525138855
+      },
+      "convert_style": "True",
+      "auto_f0_adjust": "",
+      "semi_tone_shift": "",
+      "status": "ok",
+      "file": "v2_03_style_steps50_int0.3_sim0.85__vc_v2_source_reference_1.0_50_0.85.wav",
+      "quality": {
+        "id": "v2_03_style_steps50_int0.3_sim0.85",
+        "sha256": "7ca160d28a38e555f907a7ed88b6abf65753b2e8fc0545d3d8701d58fd7e8c39",
+        "text": "at this is a local voice conversion test.",
+        "word_error_rate": 0.14285714285714285,
+        "duration": 2.705125,
+        "sample_rate": 22050,
+        "channels": 1,
+        "rms": 0.13492180123557718,
+        "peak": 0.83282470703125,
+        "clipped_fraction": 0.0
+      }
+    }
+  ]
+}
